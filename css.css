@@ -18,7 +18,8 @@ ul{
 body main #container-img{
     height: 100vh;
     background-color: bisque;
-}
+    z-index: -3;
+}   
 
 body main #container-text{
     height: 100vh;
@@ -29,17 +30,31 @@ body main #container-text{
     justify-content: center;
     align-items: center;
 }
-body main #container-text #name-psico ul{
+body main #container-text #infos-psico{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: aquamarine;
     height: 50vh;
+    width: 20vw;
     margin-top: 20vh;
+    text-align: center;
     
 }
 
-body main #container-text #name-psico ul #psico-name{
+body main #container-text #infos-psico #psico-name{
 margin-bottom: 40px;
+}
+
+#text-row{
+    border: 2px solid;
+}
+ 
+#openning{
+position: absolute;
+height: 100vh;
+width: 100vw;
+background-color: gray;
+z-index: 1;
 }
 
