@@ -1,0 +1,45 @@
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    
+}
+ul{
+    list-style: none;
+
+}
+
+
+body main #container-img{
+    height: 100vh;
+    background-color: bisque;
+}
+
+body main #container-text{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body main #container-text #name-psico ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aquamarine;
+    height: 50vh;
+    margin-top: 20vh;
+    
+}
+
+body main #container-text #name-psico ul #psico-name{
+margin-bottom: 40px;
+}
+
