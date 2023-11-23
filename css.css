@@ -43,13 +43,17 @@
     }
 }
 @keyframes slideUp {
-    to{
+    100%{
         margin-bottom:0vh;
+        visibility: visible;
+        color: rgba(white,white,white, 0.5);
         
-    }
-    from{
 
+    }
+    40%{
+        color: rgba(white,white,white, 0.1);
         margin-bottom: -60vh;
+        visibility: hidden;
     }
 }
 
@@ -93,13 +97,13 @@ body main #container-text{
 main #container-text #infos-psico{
     display: flex;
     animation-name: slideUp;
-    animation-delay: 1s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+
     min-width: 30vw;
-}
-main #container-text #infos-psico{
-    display: flex;
+    visibility: hidden;
+    animation-timing-function: linear;
     flex-direction: column;
     justify-content: space-between;
     height: 85vh;
@@ -148,7 +152,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 
-height: 0vh;
+height: 100vh;
 width: 100vw;
 
 background-image: url('./assets/img/bg-front.webp');
