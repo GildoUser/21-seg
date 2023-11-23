@@ -1,5 +1,7 @@
 :root{
-    --black-color: black
+    --black-color: black;
+    --load-color: rgb(165, 87, 42);
+    --fundo-color: #cd6d30;
 
 }
 @keyframes spin {
@@ -7,6 +9,18 @@
         transform: rotate(360deg);
     }from{
         transform: rotate(0deg);
+    }
+}
+@keyframes show-confirmation {
+    0%{   
+        visibility: hidden;
+        background-color: transparent;
+
+    }
+
+    100%{
+        visibility: visible;
+        background-color: var(--fundo-color);
     }
 }
 
@@ -18,6 +32,17 @@
         top: -100vh;
     }
 }
+
+@keyframes hiddenBoard {
+    0%{
+        background-color: var(--load-color);
+    }
+    100%{
+        background-color: #cd6d30;
+    }
+}
+
+
 
 *{
     padding: 0px;
@@ -87,8 +112,8 @@ background-size: contain;
 z-index: 1;
 
 animation-name: background-transform;
-animation-duration: 2s;
-animation-delay: 3s;
+animation-duration: 1s;
+animation-delay: 2s;
 animation-fill-mode: forwards;
 
 }
@@ -96,11 +121,19 @@ animation-fill-mode: forwards;
 #retangulo{
     width: 250px;
     height: 56px;
-    background-color: brown;
+    background-color: var(--load-color);
     border-radius: 0.25rem;
     display: inherit;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+
+    animation-name: hiddenBoard;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
 
 
 }
@@ -109,7 +142,7 @@ animation-fill-mode: forwards;
     width: 24px;
     height: 24px;
 
-    border: 3px solid #fff;
+    border: 3px solid #000000;
     border-radius: 50%;
     border-bottom-color: transparent;
     /*
@@ -117,8 +150,29 @@ animation-fill-mode: forwards;
     
     */
     animation-name: spin;
-    animation-duration: 1s;
+    animation-duration: 1.1s;
     animation-iteration-count: 2;
-    animation-timing-function: linear;
+    animation-timing-function:ease-in-out;
 
+
+
+}
+
+main #openning #retangulo #check{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    visibility: hidden;
+
+
+    animation-name: show-confirmation;
+
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-delay: 1.8s;
+    background-color: transparent;
+    animation-fill-mode: forwards;
+
+
+    
 }
