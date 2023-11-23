@@ -46,14 +46,32 @@
     100%{
         margin-bottom:0vh;
         visibility: visible;
-        color: rgba(white,white,white, 0.5);
         
 
     }
     40%{
-        color: rgba(white,white,white, 0.1);
         margin-bottom: -60vh;
         visibility: hidden;
+    }
+}
+@keyframes turnWhite{
+    100%{
+        color: var(--light-color);
+    }45%{
+        color: transparent;
+    }
+    0%{
+        color: transparent;
+    }
+}
+@keyframes turnBrown{
+    100%{
+        color: antiquewhite;
+    }75%{
+        color: transparent;
+    }
+    0%{
+        color: transparent;
     }
 }
 
@@ -66,11 +84,13 @@
 }
 h1{
     font-size: 11.95vmin;
+    animation-delay: 2.2s;
 }
 
 body{
     height: 100vh;
     max-height: 100vh;
+    overflow: hidden;
 }
 ul{
     list-style: none;
@@ -124,6 +144,7 @@ main #container-text #infos-psico #text-row{
 main #container-text #infos-psico #more{
     margin-top: -5vh;
     font-size: 4vmin;
+    animation-delay: 2.5s;
 }
 
 
@@ -134,7 +155,7 @@ main #container-text #infos-psico #arrow-down{
     width: 15vh;
     height: 15vh;
     padding-top: 4.5vh;
-
+    animation-delay: 2.8s;
    
 }
 
@@ -189,7 +210,6 @@ animation-fill-mode: forwards;
 #loading-spiner{
     width: 24px;
     height: 24px;
-
     border: 3px solid #000000;
     border-radius: 50%;
     border-bottom-color: transparent;
@@ -201,9 +221,6 @@ animation-fill-mode: forwards;
     animation-duration: 0.8s;
     animation-iteration-count: 1.7;
     animation-timing-function:ease-in-out;
-
-
-
 }
 
 main #openning #retangulo #check{
@@ -225,9 +242,17 @@ main #openning #retangulo #check{
     
 }
 #light-ch{
-    color: antiquewhite;
+    color: transparent;
+    animation-name: turnBrown;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 .texts-presentation{
-    color: var(--light-color);
+    color: transparent;
+    animation-name: turnWhite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
