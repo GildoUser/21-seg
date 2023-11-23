@@ -2,6 +2,7 @@
     --black-color: black;
     --load-color: rgb(165, 87, 42);
     --fundo-color: #cd6d30;
+    --light-color: white;
 
 }
 @keyframes spin {
@@ -41,6 +42,16 @@
         background-color: #cd6d30;
     }
 }
+@keyframes slideUp {
+    to{
+        margin-bottom:0vh;
+        
+    }
+    from{
+
+        margin-bottom: -60vh;
+    }
+}
 
 
 
@@ -49,11 +60,13 @@
     margin:0px;
     box-sizing: border-box;
 }
-
+h1{
+    font-size: 10vmin;
+}
 
 body{
     height: 100vh;
-    
+    max-height: 100vh;
 }
 ul{
     list-style: none;
@@ -76,27 +89,51 @@ body main #container-text{
     justify-content: center;
     align-items: center;
 }
-body main #container-text #infos-psico{
+
+main #container-text #infos-psico{
+    display: flex;
+    animation-name: slideUp;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+main #container-text #infos-psico{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: aquamarine;
-    height: 50vh;
-    width: 20vw;
-    margin-top: 20vh;
+    height: 85vh;
+    width: 70vw;
+    padding: 1%;
+
     text-align: center;
     
 }
-
-body main #container-text #infos-psico #psico-name{
-margin-bottom: 40px;
+main #container-text #infos-psico #text-row{
+    word-wrap: normal;
+    border: 2px red solid;
+    width: 65vw;
 }
+
+
+main #container-text #infos-psico #arrow-down{
+    border: 3px solid var(--light-color);
+    font-size: 4vh;
+    color: var(--light-color);
+    width: 15vh;
+    height: 15vh;
+    padding-top: 4.5vh;
+
+   
+}
+
+
 
 #text-row{
     border: 2px solid;
 }
 /*
-loading
+loading remover heith
 */
 #openning{
 position: absolute;
@@ -104,7 +141,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 
-height: 100vh;
+height: 0vh;
 width: 100vw;
 
 background-image: url('./assets/img/bg-front.webp');
@@ -112,8 +149,8 @@ background-size: contain;
 z-index: 1;
 
 animation-name: background-transform;
-animation-duration: 1s;
-animation-delay: 2s;
+animation-duration: 0.6s;
+animation-delay: 1.4s;
 animation-fill-mode: forwards;
 
 }
@@ -130,8 +167,8 @@ animation-fill-mode: forwards;
 
 
     animation-name: hiddenBoard;
-    animation-duration: 1s;
-    animation-delay: 1s;
+    animation-duration: 0.7s;
+    animation-delay: 0.7s;
     animation-timing-function:ease-in-out;
     animation-fill-mode: forwards;
 
@@ -150,8 +187,8 @@ animation-fill-mode: forwards;
     
     */
     animation-name: spin;
-    animation-duration: 1.1s;
-    animation-iteration-count: 2;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1.7;
     animation-timing-function:ease-in-out;
 
 
@@ -169,10 +206,17 @@ main #openning #retangulo #check{
 
     animation-duration: 1ms;
     animation-timing-function: linear;
-    animation-delay: 1.8s;
+    animation-delay: 1.2s;
     background-color: transparent;
     animation-fill-mode: forwards;
 
 
     
+}
+#light-ch{
+    color: antiquewhite;
+}
+
+.texts-presentation{
+    color: var(--light-color);
 }
