@@ -61,7 +61,7 @@
     box-sizing: border-box;
 }
 h1{
-    font-size: 10vmin;
+    font-size: 11.95vmin;
 }
 
 body{
@@ -76,7 +76,7 @@ ul{
 
 body main #container-img{
     height: 100vh;
-    background-color: bisque;
+    background-color: black;
     z-index: -3;
 }   
 
@@ -96,23 +96,30 @@ main #container-text #infos-psico{
     animation-delay: 1s;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    min-width: 30vw;
 }
 main #container-text #infos-psico{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: aquamarine;
     height: 85vh;
-    width: 70vw;
-    padding: 1%;
+    width: 100vw;
 
     text-align: center;
     
 }
 main #container-text #infos-psico #text-row{
+
     word-wrap: normal;
     border: 2px red solid;
-    width: 65vw;
+    width: 100vw;
+    height: 50vh;
+
+
+}
+main #container-text #infos-psico #more{
+    margin-top: -5vh;
+    font-size: 4vmin;
 }
 
 
